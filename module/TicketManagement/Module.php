@@ -17,18 +17,18 @@ class Module implements ConfigProviderInterface {
     public function getServiceConfig() {
         return [
             'factories' => [
-//                Model\IncidentTable::class        => function ($container) {
-//                    $tableGateway = $container->get('Model\IncidentTableGateway');
-//
-//                    return new Model\IncidentTable($tableGateway);
-//                },
-//                'Model\IncidentTableGateway' => function ($container) {
-//                    $dbAdapter          = $container->get(AdapterInterface::class);
-//                    $resultSetPrototype = new ResultSet();
-//                    $resultSetPrototype->setArrayObjectPrototype(new Model\Incident());
-//
-//                    return new TableGateway('album', $dbAdapter, null, $resultSetPrototype);
-//                },
+                Model\TicketTable::class        => function ($container) {
+                    $tableGateway = $container->get('Model\TicketTableGateway');
+
+                    return new Model\TicketTable($tableGateway);
+                },
+                'Model\TicketTableGateway' => function ($container) {
+                    $dbAdapter = $container->get(AdapterInterface::class);
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Model\Ticket());
+
+                    return new TableGateway('AAAA_MNIT_TICKET', $dbAdapter, null, $resultSetPrototype);
+                },
             ],
         ];
     }
@@ -38,7 +38,7 @@ class Module implements ConfigProviderInterface {
             'factories' => [
                 Controller\TicketController::class => function ($container) {
                     return new Controller\TicketController(
-//                        $container->get(Model\IncidentTable::class)
+                        $container->get(Model\TicketTable::class)
                             );
                 },
             ],

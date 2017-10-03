@@ -27,5 +27,8 @@ return [
         'template_path_stack' => [
             'ticket-management' => __DIR__ . '/../view',
         ],
+        'strategies' => [
+            'ViewJsonStrategy',
+        ],
     ],
 ];
