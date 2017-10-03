@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nbproject
 ._*
 .vagrant
@@ -11,3 +12,30 @@ vendor/
 composer.phar
 config/development.config.php
 phpunit.xml
+=======
+# Composer files
+composer.phar
+vendor/
+
+# Local configs
+config/autoload/*.local.php
+
+# Binary gettext files
+*.mo
+
+# Data
+data/logs/
+data/cache/
+data/sessions/
+data/tmp/
+temp/
+
+#Doctrine 2
+data/DoctrineORMModule/Proxy/
+data/DoctrineORMModule/cache/
+
+
+# Legacy ZF1
+demos/
+extras/documentation
+>>>>>>> origin/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ZendSkeletonApplication
 
 ## Introduction
@@ -174,3 +175,7 @@ server {
 ```
 
 Restart the nginx, now you should be ready to go!
+=======
+# mnla
+todos los proyectos mnla
+>>>>>>> origin/master
