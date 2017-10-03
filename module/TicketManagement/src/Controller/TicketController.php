@@ -2,19 +2,18 @@
 
 namespace TicketManagement\Controller;
 
-use TicketManagement\Form\TicketForm;
-use TicketManagement\Model\Ticket;
-use TicketManagement\Model\TicketTable;
+//use TicketManagement\Form\TicketForm;
+use TicketManagement\Model\Incident;
+use TicketManagement\Model\IncidentTable;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-
+use Zend\View\Model\JsonModel;
 class TicketController extends AbstractActionController {
 
-    private $table_ticket;
+    private $table_incident;
 
-    public function __construct(TicketTable $table_ticket) {
-
-        $this->table_ticket = $table_ticket;
+    public function __construct(IncidentTable $table_incident) {
+        $this->table_incident = $table_incident;
     }
 
 //    public function __construct(TicketTable $table)
@@ -27,8 +26,8 @@ class TicketController extends AbstractActionController {
     }
 
     public function getTicketsAction() {
-        $param_ = $this->getEvent()->getRouteMatch()->getParam('param');
-        $resultSet = $this->table_ticket->fetchAllTickets();//['type' => $param_]
+//        $param_ = $this->getEvent()->getRouteMatch()->getParam('param');
+        $resultSet = $this->table_incident->fetchAllIncidents();//['type' => $param_]
         return new JsonModel($resultSet);
     }
 

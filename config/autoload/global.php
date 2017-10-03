@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Global Configuration Override
  *
@@ -10,10 +11,31 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
+//return [
+//    'db' => [
+//        //'driver' => 'OCI8',
+//        'oci:dbname=yoursid',
+//        'connection_string' => '192.168.36.6/orcl',
+//        'character_set' => 'AL32UTF8',
+//    ],
+//];
 
-return [
+//return [
+//    'db' => [
+//        'driver' => 'Oci8',
+//        'dsn' => 'oci8:dbname=//192.168.36.6:1521/orcl;charset=UTF8',
+//        'username' => 'MNINTE',
+//        'password' => 'MNINTE',
+//        'character_set' => 'AL32UTF8',
+//        'platform_options' => array('quote_identifiers' => false)
+//    ]
+//];
+
+ return [
     'db' => [
-        'driver' => 'Pdo',
-        'dsn'    => sprintf('sqlite:%s/data/zftutorial.db', realpath(getcwd())),
-    ],
+        'driver' => 'Oci8',
+        'connection_string' => '192.168.36.6/orcl',
+        'character_set' => 'AL32UTF8',
+        'platform_options' => array('quote_identifiers' => false)
+    ]
 ];

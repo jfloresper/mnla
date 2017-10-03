@@ -7,7 +7,7 @@ use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
 
-class Ticket {
+class Incident {
 
     public $IDX;
     public $STS_REC;

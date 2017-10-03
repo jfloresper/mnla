@@ -10,12 +10,16 @@ use Zend\Db\TableGateway\TableGateway;
 use Zend\Paginator\Adapter\DbSelect;
 use Zend\Paginator\Paginator;
 
-class TicketTable {
+class IncidentTable {
 
     private $tableGateway;
 
     public function __construct(TableGatewayInterface $tableGateway) {
         $this->tableGateway = $tableGateway;
+    }
+
+    public function fetchAllIncidents() {
+        return $this->tableGateway->select();
     }
 
     public function fetchAll($paginated = false) {
